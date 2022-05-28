@@ -23,6 +23,7 @@
 
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{% url 'auth:edit' %}">профиль</a>
+                        <a class="dropdown-item" href="{% url 'basket:view' %}">корзина</a>
 
 
                         {% if user.is_superuser %}
@@ -42,6 +43,8 @@
                     </li>
                 {% endif %}
             </li>
+
+
         </ul>
         <form class="form-inline my-2 my-lg-0" >
             <input class="form-control mr-sm-1 " action="{% url 'acc:index' %}"
@@ -50,6 +53,7 @@
             <button class="btn btn-outline-danger my-2 my-sm-0 disabled"
                     type="submit">Поиск</button>
         </form>
+
     </div>
 </nav>
 </div>
